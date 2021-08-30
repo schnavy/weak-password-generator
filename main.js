@@ -40,6 +40,15 @@ function updateEvalUI(input) {
 		"Hard to memorize",
 		"Too complicated!",
 	];
+	let evalsTexts = [
+		". Classic!",
+		". Nice touch!",
+		". I like your style!",
+		"... smooth.",
+		".",
+		".",
+		".",
+	];
 	let colors = ["#00c500", "#86da00", "#yellow", "orange", "red"];
 	let blocks = document.querySelectorAll(".balken");
 	let evalField = document.querySelector(".eval-text");
@@ -47,11 +56,7 @@ function updateEvalUI(input) {
 
 	evalField.style.color = colors[input.strength];
 	evalField.textContent = evals[input.strength];
-  warningField.classList.remove("visible")  
-	if (input.warning != "") {
-		warningField.textContent = "Bonus: " + input.warning;
-    warningField.classList.add("visible")
-	}
+	warningField.classList.remove("visible");
 
 	blocks.forEach((e) => {
 		e.style.opacity = "1";
@@ -60,6 +65,15 @@ function updateEvalUI(input) {
 	for (let i = 0; i < input.strength; i++) {
 		blocks[blocks.length - i - 1].style.opacity = "0";
 	}
+	setTimeout(() => {
+		if (input.warning != "") {
+			warningField.textContent =
+				"Bonus: " +
+				input.warning +
+				evalsTexts[Math.floor(Math.random() * evalsTexts.length)];
+			warningField.classList.add("visible");
+		}
+	}, 200);
 }
 
 function copy() {
