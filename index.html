@@ -12,20 +12,46 @@
 <body>
     <div class="container">
         <h1> Weak password Generator</h1> <br>
-        <p>Use this tool to generate a completely unsafe password. <br> All passwords are guaranteed to be among to 30.000 most used passwords wordwide.</p> <br> <br>
+        <p>Use this tool to generate a completely unsafe password or type to test your own password for ease of use. <br>
+            All passwords are guaranteed to be among to
+            30.000 most used passwords wordwide.</p> <br> <br>
+            <div class="copy-alert">copied to clipboard</div>
         <div class="pw-wrapper">
             <button>New</button>
             <div class="pw-field">
-                <input id="pw"  type="text"></input>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.09 20.09"><g id="Ebene_2" data-name="Ebene 2"><g id="Ebene_1-2" data-name="Ebene 1"><rect width="2.09" height="16.1"/><rect x="7" y="-7" width="2.09" height="16.1" transform="translate(7 9.1) rotate(-90)"/><rect x="3.99" y="3.99" width="2.09" height="16.1"/><rect x="11" y="-3.01" width="2.09" height="16.1" transform="translate(7 17.08) rotate(-90)"/><rect x="18" y="3.99" width="2.09" height="16.1" transform="translate(38.09 24.08) rotate(180)"/><rect x="11" y="11" width="2.09" height="16.1" transform="translate(31.09 7) rotate(90)"/></g></g></svg>
+                <input id="pw" type="text"></input>
+                <svg class="copy-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.09 20.09">
+                    <g id="Ebene_2" data-name="Ebene 2">
+                        <g id="Ebene_1-2" data-name="Ebene 1">
+                            <rect width="2.09" height="16.1" />
+                            <rect x="7" y="-7" width="2.09" height="16.1" transform="translate(7 9.1) rotate(-90)" />
+                            <rect x="3.99" y="3.99" width="2.09" height="16.1" />
+                            <rect x="11" y="-3.01" width="2.09" height="16.1"
+                                transform="translate(7 17.08) rotate(-90)" />
+                            <rect x="18" y="3.99" width="2.09" height="16.1"
+                                transform="translate(38.09 24.08) rotate(180)" />
+                            <rect x="11" y="11" width="2.09" height="16.1" transform="translate(31.09 7) rotate(90)" />
+                        </g>
+                    </g>
+                </svg>
             </div>
+            <div class="balken-wrapper">
+                <div class="balken"></div>
+                <div class="balken"></div>
+                <div class="balken"></div>
+                <div class="balken"></div>
+                <div class="balken"></div>
+            </div>
+            <div class="eval-text"></div>
+            <div class="warning-text"></div>
         </div>
-        <div class="copy-alert">copied to clipboard</div>
+
 
     </div>
 </body>
 <footer>
     <script src="assets/pws.js"></script>
+    <script type="text/javascript" src="zxcvbn.js"></script>
     <script src="main.js"></script>
 </footer>
 
