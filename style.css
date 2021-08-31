@@ -54,16 +54,6 @@ body {
     margin: 0px 30px;
 }
 
-@media(max-width: 800px) {
-    body {
-        font-size: 100%;
-    }
-    
-    .container {
-        margin-top: 20px;
-
-    }
-}
 
 h1 {
     filter: blur(2px);
@@ -84,7 +74,22 @@ button,
     font-size: 1.2em;
     border-radius: 5px;
     white-space: nowrap;
-    ;
+}
+
+@media(max-width: 800px) {
+    body {
+        font-size: 110%;
+    }
+
+    .container {
+        margin-top: 40px;
+
+    }
+
+    button,
+    .pw-field {
+        font-size: 1em;
+    }
 }
 
 button {

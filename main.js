@@ -4,11 +4,12 @@ const copyButton = document.querySelector(".copy-button");
 const pwString = document.querySelector("#pw");
 const pwField = document.querySelector(".pw-field");
 const copyAlert = document.querySelector(".copy-alert");
-
+let generated = true;
 newPW();
 updateEvalUI(checkPW(pwString.value));
 
 button.addEventListener("click", (e) => {
+	generated = true;
 	newPW();
 	updateEvalUI(checkPW(pwString.value));
 });
@@ -16,6 +17,8 @@ copyButton.addEventListener("click", (e) => {
 	copy();
 });
 pwString.addEventListener("input", (e) => {
+	generated = false;
+
 	updateEvalUI(checkPW(pwString.value));
 });
 
@@ -65,6 +68,8 @@ function updateEvalUI(input) {
 	for (let i = 0; i < input.strength; i++) {
 		blocks[blocks.length - i - 1].style.opacity = "0";
 	}
+	if (generated) return;
+
 	setTimeout(() => {
 		if (input.warning != "") {
 			warningField.textContent =

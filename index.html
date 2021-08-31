@@ -7,19 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weak Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="zxcvbn.js"></script>
+    <script src="assets/pws.js"></script>
+    <script src="main.js" defer></script>
+
 </head>
 
 <body>
     <div class="container">
         <h1> Weak password Generator</h1> <br>
-        <p>Use this tool to generate a completely unsafe password or type to test your own password for ease of use. <br>
-            All passwords are guaranteed to be among to
-            30.000 most used passwords wordwide.</p> <br> <br>
+        <p>Use this tool to generate a completely unsafe password or enter your own password to test it for ease of use. <br>
+            All generated passwords are guaranteed to be among to 30.000 most used passwords wordwide.</p> <br> <br>
             <div class="copy-alert">copied to clipboard</div>
         <div class="pw-wrapper">
             <button>New</button>
             <div class="pw-field">
-                <input id="pw" type="text"></input>
+                <input id="pw" type="text" onfocus="this.value=''"></input>
                 <svg class="copy-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.09 20.09">
                     <g id="Ebene_2" data-name="Ebene 2">
                         <g id="Ebene_1-2" data-name="Ebene 1">
@@ -49,10 +52,4 @@
 
     </div>
 </body>
-<footer>
-    <script src="assets/pws.js"></script>
-    <script type="text/javascript" src="zxcvbn.js"></script>
-    <script src="main.js"></script>
-</footer>
-
 </html>
