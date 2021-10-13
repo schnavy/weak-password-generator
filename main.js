@@ -6,7 +6,7 @@ const pwField = document.querySelector(".pw-field");
 const copyAlert = document.querySelector(".copy-alert");
 let generated = true;
 // newPW();
-updateEvalUI(checkPW(pwString.value));
+// updateEvalUI(checkPW(pwString.value));
 
 button.addEventListener("click", (e) => {
 	generated = true;
